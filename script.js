@@ -1,19 +1,50 @@
-document.getElementById("consultation-form").addEventListener("submit", function(e) {
-    e.preventDefault();  // หยุดการรีเฟรชหน้า
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
 
-    // ตรวจสอบข้อมูลที่กรอก
-    if(name && email && message) {
-        // แสดงป๊อปอัพ
-        document.getElementById("popup").style.display = "flex";
-    } else {
-        alert("กรุณากรอกข้อมูลทั้งหมดให้ครบถ้วน");
-    }
-});
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
 
-// ปิดป๊อปอัพ
-document.getElementById("close-popup").addEventListener("click", function() {
-    document.getElementById("popup").style.display = "none";
-});
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
